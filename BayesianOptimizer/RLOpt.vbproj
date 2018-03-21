@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF581A0B-12C8-4106-8B54-7FDB842A655F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RLOpt</RootNamespace>
+    <AssemblyName>RLOpt</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RLOpt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <AdditionalParameters>
+    </AdditionalParameters>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RLOpt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <AdditionalParameters>
+    </AdditionalParameters>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Sub Main</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.17.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.17.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BayesianOptimization\CovarianceFunctions\Matern1d2.vb" />
+    <Compile Include="BayesianOptimization\CovarianceFunctions\Matern3d2.vb" />
+    <Compile Include="BayesianOptimization\CovarianceFunctions\Matern5d3.vb" />
+    <Compile Include="BayesianOptimization\CovarianceFunctions\RadialBasisFunction.vb" />
+    <Compile Include="BayesianOptimization\AcquisitionOptimizationFunctions\AcquisitionOptimizationFunction.vb" />
+    <Compile Include="BayesianOptimization\AcquisitionOptimizationFunctions\DividingRectangles.vb" />
+    <Compile Include="BayesianOptimization\AcquisitionFunctions\AcquisitionFunction.vb" />
+    <Compile Include="BayesianOptimization\AcquisitionFunctions\ExpectedImprovement.vb" />
+    <Compile Include="BayesianOptimization\AcquisitionFunctions\ExpectedImprovementBinary.vb" />
+    <Compile Include="BayesianOptimization\CovarianceFunctions\CovarianceFunction.vb" />
+    <Compile Include="BayesianOptimization\CovarianceFunctions\SquaredExponentialARD.vb" />
+    <Compile Include="BayesianOptimization\CovarianceFunctions\SquaredExponentialIsotropic.vb" />
+    <Compile Include="BayesianOptimization\LatinHypercubeSampling.vb" />
+    <Compile Include="BayesianOptimization\AcquisitionOptimizationFunctions\LatinHypercubeOptimization.vb" />
+    <Compile Include="BayesianOptimization\LogOptimizationFunctions\LatinHypercubeLogLikelihood.vb" />
+    <Compile Include="BayesianOptimization\LogOptimizationFunctions\LogLikelihoodOptimizationFunction.vb" />
+    <Compile Include="BayesianOptimization\LogOptimizationFunctions\NelderMeadLogLikelihood.vb" />
+    <Compile Include="BayesianOptimization\LogOptimizationFunctions\NelderMeadConvergentLogLikelihood.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\EpsilonGreedy.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\NextOptQueryDecisionFunction.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\Softmax.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\UCB1.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\UCB1Tuned.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\UCB1Variance.vb" />
+    <Compile Include="BayesianOptimization\MetaLearning\UCB1TunedStandarized.vb" />
+    <Compile Include="OtherOptimization\GridSearchOptimizer.vb" />
+    <Compile Include="OtherOptimization\RandomSearchOptimizer.vb" />
+    <Compile Include="BayesianOptimization\UtilityFunctions\UtilityFunctions.vb" />
+    <Compile Include="Main.vb" />
+    <Compile Include="RLHyperparameterOptimizer.vb" />
+    <Compile Include="ReinforcementLearning\Action.vb" />
+    <Compile Include="ReinforcementLearning\Agent.vb" />
+    <Compile Include="BayesianOptimization\BayesianOptimizer.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\DynaH.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\DynaQ.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\DynaQPlus.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\QLambda.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\QLearning.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\Sarsa.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\TDAgent.vb" />
+    <Compile Include="ReinforcementLearning\Environment.vb" />
+    <Compile Include="ReinforcementLearning\Gridworld.vb" />
+    <Compile Include="ReinforcementLearning\ModelStateAction.vb" />
+    <Compile Include="ReinforcementLearning\QValue.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\SarsaLambda.vb" />
+    <Compile Include="ReinforcementLearning\Algorithms\SarsaLambdaBinaryMeasure.vb" />
+    <Compile Include="ReinforcementLearning\State.vb" />
+    <Compile Include="ReinforcementLearning\Transition.vb" />
+    <Compile Include="ReinforcementLearning\ZValue.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Testing\InheritedClassesForTesting\AcquisitionFunctionTrivial.vb" />
+    <Compile Include="Testing\ResultSaver.vb" />
+    <Compile Include="Testing\InheritedClassesForTesting\SarsaLambdaAgentOnlyOneParameter.vb" />
+    <Compile Include="Testing\InheritedClassesForTesting\SarsaLambdaAgentOnlyTwoParameters.vb" />
+    <Compile Include="Testing\InheritedClassesForTesting\SarsaLambdaAgentSimpleMeasure.vb" />
+    <Compile Include="Testing\TestAgentGridworld.vb" />
+    <Compile Include="Testing\TestBayesianOptimizer.vb" />
+    <Compile Include="Testing\TestGridSearch.vb" />
+    <Compile Include="Testing\TestRandomSearch.vb" />
+    <Compile Include="Testing\TestSandbox.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

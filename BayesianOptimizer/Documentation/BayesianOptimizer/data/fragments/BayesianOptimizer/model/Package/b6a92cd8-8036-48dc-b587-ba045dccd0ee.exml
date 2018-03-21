@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ReinforcementLearning" version="4">
+  <OBJECT>
+    <ID name="ReinforcementLearning" mc="Standard.Package" uid="b6a92cd8-8036-48dc-b587-ba045dccd0ee"/>
+    <PID name="bayesianoptimizer" mc="Standard.Package" uid="d123e5d4-976c-482c-9ba7-7a44d7909db5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ReinforcementLearning]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Agent" mc="Standard.Class" uid="e3fbfe7b-83b9-4096-bea6-46c527f5e3c8"/>
+        <COMPID name="SarsaLambda" mc="Standard.Class" uid="af30a9d6-4b17-46ad-bf91-6efceb116ecf"/>
+        <COMPID name="QValue" mc="Standard.Class" uid="2a0e1521-7948-4ef7-8078-ef8332a70448"/>
+        <COMPID name="ZValue" mc="Standard.Class" uid="64f06e36-2251-4807-91ef-4153d255b1df"/>
+        <COMPID name="Environment" mc="Standard.Class" uid="3f3a9b3d-f8cc-483a-a204-e381a8dc6d5b"/>
+        <COMPID name="Gridworld" mc="Standard.Class" uid="9e069ad4-d3cd-4e99-8f93-0eeb386ffb38"/>
+        <COMPID name="Transition" mc="Standard.Class" uid="820dd40c-9540-45c8-9591-e319f6c4efef"/>
+        <COMPID name="Action" mc="Standard.Class" uid="208871b4-091d-4d36-b854-e2affd0ed0e5"/>
+        <COMPID name="State" mc="Standard.Class" uid="9decdcbc-029a-47a0-a0ad-99db102787bb"/>
+        <COMPID name="TDAgent" mc="Standard.Class" uid="f2cba963-207c-4425-9237-d0149ea8ac5c"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

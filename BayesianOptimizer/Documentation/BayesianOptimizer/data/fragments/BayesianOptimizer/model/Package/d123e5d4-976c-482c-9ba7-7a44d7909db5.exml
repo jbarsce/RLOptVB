@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="bayesianoptimizer" version="4">
+  <OBJECT>
+    <ID name="bayesianoptimizer" mc="Standard.Package" uid="d123e5d4-976c-482c-9ba7-7a44d7909db5"/>
+    <PID name="BayesianOptimizer" mc="Standard.Project" uid="17423f00-31ba-4e97-aa2c-762594546a85"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[bayesianoptimizer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="BayesianOptimizer" mc="Standard.Package" uid="c815d9bd-bebb-477a-8321-90289e5583fb"/>
+        <COMPID name="ReinforcementLearning" mc="Standard.Package" uid="b6a92cd8-8036-48dc-b587-ba045dccd0ee"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="Standard.ClassDiagram" uid="c62d2ea8-bca3-49c7-a336-fb5546bec4f1"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
