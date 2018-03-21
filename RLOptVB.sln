@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RLOpt", "BayesianOptimizer\RLOpt.vbproj", "{BF581A0B-12C8-4106-8B54-7FDB842A655F}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RLOpt", "RLOptVB\RLOpt.vbproj", "{BF581A0B-12C8-4106-8B54-7FDB842A655F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
